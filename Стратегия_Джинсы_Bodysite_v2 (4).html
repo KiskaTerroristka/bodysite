@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стратегия запуска · Мужские джинсы · bodysite</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#e8823a;
+  --orange-light:#fff4ec;
+  --orange-dark:#c4641e;
+  --dark:#111214;
+  --dark2:#1c1e22;
+  --dark3:#2a2d33;
+  --mid:#555b66;
+  --light:#f6f7f9;
+  --border:#e4e6ea;
+  --green:#1e7f4e;
+  --green-bg:#eaf6ee;
+  --red:#c0392b;
+  --red-bg:#fdf0ee;
+  --yellow:#c97a00;
+  --yellow-bg:#fff8e6;
+  --wb:#7b11e3;
+  --oz:#005bff;
+  --ym:#fc3f1d;
+}
+body{font-family:'Manrope',sans-serif;background:#fff;color:var(--dark);font-size:14px;line-height:1.55}
+a{color:var(--orange);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── HEADER ── */
+.header{background:#fff;padding:14px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.logo-wordmark{display:flex;align-items:center;gap:10px}
+.logo-dot{width:36px;height:36px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:800;letter-spacing:-1px;font-family:'IBM Plex Mono',monospace}
+.logo-text{font-size:20px;font-weight:800;color:var(--dark);letter-spacing:-0.5px}
+.logo-sub{font-size:10px;font-weight:600;color:#aaa;text-transform:uppercase;letter-spacing:0.15em;margin-top:1px}
+.header-meta{text-align:right;font-size:11px;color:#aaa;line-height:1.5}
+.header-meta strong{color:var(--orange);font-weight:700;font-size:13px;display:block}
+
+/* ── HERO ── */
+.hero{background:var(--dark);padding:52px 48px 44px;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(232,130,58,.18) 0%,transparent 70%);pointer-events:none}
+.hero-tag{font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.hero-tag::before{content:'';display:inline-block;width:20px;height:2px;background:var(--orange)}
+.hero h1{font-size:36px;font-weight:800;line-height:1.15;margin-bottom:10px;letter-spacing:-0.5px}
+.hero h1 em{color:var(--orange);font-style:normal}
+.hero p{font-size:14px;color:rgba(255,255,255,.65);max-width:640px;line-height:1.7}
+.hero-kpis{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hkpi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 22px;transition:.2s}
+.hkpi:hover{background:rgba(255,255,255,.1)}
+.hkpi-val{font-size:24px;font-weight:800;line-height:1;letter-spacing:-0.5px;color:#fff}
+.hkpi-lbl{font-size:10px;color:rgba(255,255,255,.5);margin-top:4px;text-transform:uppercase;letter-spacing:0.08em;font-weight:600}
+
+/* ── DIVIDER ── */
+.divider{height:3px;background:linear-gradient(90deg,var(--orange) 0%,#ffa96c 50%,var(--border) 100%)}
+
+/* ── BRIEF STRIP ── */
+.brief-strip{background:var(--light);border-bottom:1px solid var(--border);padding:16px 48px;display:flex;flex-wrap:wrap;gap:36px}
+.bs-item .bs-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:var(--orange);margin-bottom:3px}
+.bs-item .bs-val{font-size:12px;font-weight:600;color:var(--dark)}
+.bs-item .bs-val span{font-weight:400;color:var(--mid)}
+
+/* ── TOC ── */
+.toc{background:#fff;border-bottom:1px solid var(--border);padding:10px 48px;display:flex;flex-wrap:wrap;gap:4px}
+.toc a{font-size:11px;font-weight:600;color:var(--mid);text-decoration:none;padding:5px 12px;border-radius:20px;border:1px solid transparent;white-space:nowrap;transition:.15s}
+.toc a:hover{color:var(--orange);border-color:var(--orange);background:var(--orange-light)}
+
+/* ── SECTION ── */
+.section{padding:40px 48px;border-bottom:1px solid var(--border)}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.section-num{background:var(--dark);color:#fff;font-size:10px;font-weight:700;font-family:'IBM Plex Mono',monospace;padding:4px 9px;border-radius:4px;letter-spacing:0.05em}
+.section-title{font-size:18px;font-weight:800;color:var(--dark);letter-spacing:-0.3px}
+.section-sub{font-size:12px;color:#aaa;margin-left:4px;font-weight:500}
+
+/* ── BRAND GRID ── */
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.brand-card{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.brand-head{padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.brand-head.tj{background:#0d0d1f;color:#fff}
+.brand-head.usp{background:#003087;color:#fff}
+.brand-head.nau{background:#0a4d7c;color:#fff}
+.brand-head.lev{background:#c8102e;color:#fff}
+.brand-name{font-size:15px;font-weight:800}
+.brand-qty{font-size:26px;font-weight:800;opacity:.9;font-family:'IBM Plex Mono',monospace}
+.brand-body{padding:14px 20px;background:#fff}
+.brand-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed var(--border);font-size:12px}
+.brand-row:last-child{border-bottom:none;font-weight:700;color:var(--orange)}
+.brand-row span:first-child{color:var(--mid)}
+
+/* ── MARKET DATA ── */
+.mkt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:24px}
+.mkt-card{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.mkt-head{padding:14px 20px;display:flex;align-items:center;gap:10px}
+.mkt-head.wb{background:var(--wb)}
+.mkt-head.oz{background:var(--oz)}
+.mkt-head h3{font-size:14px;font-weight:800;color:#fff}
+.mkt-head small{font-size:10px;color:rgba(255,255,255,.65);margin-left:2px}
+.mkt-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border)}
+.mkt-stat{background:#fff;padding:12px 16px}
+.mkt-stat .sv{font-size:16px;font-weight:800;color:var(--dark);line-height:1;letter-spacing:-0.3px}
+.mkt-stat .sk{font-size:11px;color:#aaa;margin-top:3px;font-weight:500}
+
+/* ── SEG BARS ── */
+.seg-wrap{margin:16px 0}
+.seg-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#aaa;margin-bottom:10px}
+.seg-bars{display:flex;gap:3px;align-items:flex-end;height:80px}
+.seg-bar-wrap{display:flex;flex-direction:column;align-items:center;flex:1}
+.seg-bar{width:100%;border-radius:3px 3px 0 0;background:#e8e8e8;min-height:4px}
+.seg-bar.active{background:var(--orange)}
+.seg-bar.highlight{background:var(--red)}
+.seg-lbl{font-size:8px;color:#bbb;margin-top:3px;text-align:center;line-height:1.2}
+.seg-note{font-size:12px;color:var(--mid);margin-top:10px;padding:10px 14px;background:var(--orange-light);border-radius:8px;border-left:3px solid var(--orange);line-height:1.65}
+
+/* ── SEASON ── */
+.season-grid{display:flex;gap:4px;align-items:flex-end;height:70px;margin:10px 0}
+.s-bar-wrap{display:flex;flex-direction:column;align-items:center;flex:1}
+.s-bar{width:100%;border-radius:3px 3px 0 0;min-height:3px}
+.s-bar.pos{background:var(--green)}
+.s-bar.neg{background:var(--red);opacity:.7}
+.s-bar.neutral{background:#ccc}
+.s-lbl{font-size:8px;color:#aaa;margin-top:3px;text-align:center}
+.s-val{font-size:8px;font-weight:700;text-align:center;margin-bottom:2px}
+
+/* ── COMPETITOR TABLE ── */
+.comp-table-wrap{overflow-x:auto}
+table.ctable{width:100%;border-collapse:collapse;font-size:12px}
+table.ctable thead tr{background:var(--dark);color:#fff}
+table.ctable thead th{padding:10px 14px;font-size:11px;font-weight:700;letter-spacing:0.04em;text-align:left;white-space:nowrap}
+table.ctable thead th:not(:first-child){text-align:center}
+table.ctable tbody tr{border-bottom:1px solid var(--border)}
+table.ctable tbody tr:nth-child(even){background:var(--light)}
+table.ctable tbody td{padding:9px 14px;color:#444;vertical-align:middle}
+table.ctable tbody td:not(:first-child){text-align:center}
+.badge-mp{display:inline-block;padding:3px 9px;border-radius:10px;font-size:10px;font-weight:700;color:#fff;font-family:'IBM Plex Mono',monospace}
+.badge-mp.wb{background:var(--wb)}
+.badge-mp.oz{background:var(--oz)}
+.badge-mp.ym{background:var(--ym)}
+.rev-bar{display:flex;align-items:center;gap:6px}
+.rev-fill{height:6px;border-radius:3px;background:var(--orange);display:inline-block;min-width:4px}
+.rev-val{font-size:11px;font-weight:700;color:var(--dark);white-space:nowrap}
+.art-link{font-size:10px;color:var(--orange);text-decoration:none;display:block;margin-top:2px}
+.art-link:hover{text-decoration:underline}
+
+/* ── MP COMPARE ── */
+.mp-compare{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-bottom:20px}
+.mpc-col{background:#fff}
+.mpc-head{padding:16px 20px;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid var(--border)}
+.mpc-head.rec{background:var(--orange-light);border-bottom:2px solid var(--orange)}
+.mp-badge{border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;width:36px;height:36px;flex-shrink:0;font-family:'IBM Plex Mono',monospace}
+.mp-badge.ozon{background:var(--oz)}
+.mp-badge.wb{background:var(--wb)}
+.mp-badge.ym{background:var(--ym)}
+.mpc-head h3{font-size:14px;font-weight:800;color:var(--dark);line-height:1.2}
+.mpc-head small{font-size:10px;color:#aaa;display:block;margin-top:2px;font-weight:500}
+.rec-tag{background:var(--orange);color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:0.06em;margin-top:4px;display:inline-block}
+.mpc-body{padding:14px 20px}
+.mpc-stat{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px dashed var(--border);font-size:12px}
+.mpc-stat:last-child{border-bottom:none}
+.mpc-stat .lbl{color:#aaa;font-weight:500}
+.mpc-stat .val{font-weight:700;color:var(--dark)}
+.mpc-stat .val.bad{color:var(--red)}
+.mpc-stat .val.good{color:var(--green)}
+.mpc-pros{padding:10px 20px 16px}
+.mpc-pro{font-size:12px;color:#444;padding:3px 0 3px 16px;position:relative;line-height:1.5}
+.mpc-pro::before{content:'→';position:absolute;left:0;color:var(--orange);font-size:11px}
+.mpc-con{font-size:12px;color:#aaa;padding:3px 0 3px 16px;position:relative;line-height:1.5}
+.mpc-con::before{content:'—';position:absolute;left:0;color:#ddd;font-size:11px}
+.verdict{background:var(--orange-light);border:2px solid var(--orange);border-radius:12px;padding:24px 28px;margin-top:20px;display:flex;gap:20px;align-items:flex-start}
+.verdict-icon{font-size:32px;flex-shrink:0;line-height:1}
+.verdict h3{font-size:15px;font-weight:800;margin-bottom:8px;color:var(--dark)}
+.verdict p{font-size:13px;color:var(--mid);line-height:1.7}
+.verdict .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag{background:#fff;border:1px solid var(--orange);color:var(--orange);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px}
+
+/* ── UNIT ECON ── */
+.ue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.ue-card{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.ue-head{padding:14px 20px;background:var(--dark);color:#fff;display:flex;justify-content:space-between;align-items:center}
+.ue-head span{font-size:11px;opacity:.5;font-weight:500}
+.ue-head strong{font-size:13px;font-weight:700}
+.ue-rows{padding:0 20px}
+.ue-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.ue-row:last-child{border-bottom:none}
+.ue-row .k{color:#aaa;font-weight:500}
+.ue-row .v{font-weight:700}
+.ue-row .v.neg{color:var(--red)}
+.ue-total{background:var(--light);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--border)}
+.ue-total .tl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#aaa}
+.ue-total .tv{font-size:20px;font-weight:800;letter-spacing:-0.5px;font-family:'IBM Plex Mono',monospace}
+.ue-total .tv.pos{color:var(--green)}
+.ue-total .tv.warn{color:var(--yellow)}
+.ue-note{font-size:11px;color:#aaa;padding:10px 20px 14px;line-height:1.5}
+
+/* ── FORECAST ── */
+.real-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.real-card{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.real-head{padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.real-head.tj{background:#0d0d1f;color:#fff}
+.real-head.usp{background:#003087;color:#fff}
+.real-head.nau{background:#0a4d7c;color:#fff}
+.real-head.lev{background:#c8102e;color:#fff}
+.real-body{padding:14px 20px}
+.real-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed var(--border);font-size:12px}
+.real-row:last-child{border-bottom:none}
+.real-row .rk{color:#aaa;font-weight:500}
+.real-row .rv{font-weight:700}
+.real-row .rv.warn{color:var(--yellow)}
+.real-row .rv.bad{color:var(--red)}
+.real-row .rv.good{color:var(--green)}
+.pb-wrap{margin-top:12px}
+.pb-label{font-size:11px;color:#aaa;margin-bottom:5px;font-weight:500}
+.pb{width:100%;background:var(--border);border-radius:4px;height:10px;overflow:hidden}
+.pb-fill{height:100%;border-radius:4px}
+.pb-fill.green{background:var(--green)}
+.pb-fill.orange{background:var(--orange)}
+.pb-fill.red{background:var(--red)}
+.pb-pct{font-size:12px;font-weight:800;margin-top:4px;font-family:'IBM Plex Mono',monospace}
+
+/* ── NOTICES ── */
+.notice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.notice-card{border-radius:10px;padding:16px 20px;display:flex;gap:12px;align-items:flex-start}
+.notice-card.warn{background:var(--yellow-bg);border:1px solid #f5d080}
+.notice-card.info{background:#e8f0fd;border:1px solid #93b4f5}
+.notice-card.success{background:var(--green-bg);border:1px solid #8fdbb0}
+.notice-card.danger{background:var(--red-bg);border:1px solid #f5a0a0}
+.notice-icon{font-size:20px;flex-shrink:0;line-height:1;margin-top:2px}
+.notice-card h4{font-size:13px;font-weight:700;margin-bottom:5px}
+.notice-card p{font-size:12px;color:var(--mid);line-height:1.55}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:30px;margin-top:8px}
+.timeline::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:22px}
+.tl-dot{position:absolute;left:-25px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--orange);border:2px solid #fff;box-shadow:0 0 0 2px var(--orange)}
+.tl-dot.grey{background:#ccc;box-shadow:0 0 0 2px #ccc}
+.tl-month{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--orange);margin-bottom:3px;font-family:'IBM Plex Mono',monospace}
+.tl-title{font-size:13px;font-weight:700;margin-bottom:5px}
+.tl-desc{font-size:12px;color:var(--mid);line-height:1.55}
+.tl-stats{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tl-stat{background:var(--light);border:1px solid var(--border);border-radius:5px;padding:3px 10px;font-size:11px;font-weight:600;color:#555}
+
+/* ── SERVICES ── */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.srv-card{background:var(--light);border:1px solid var(--border);border-radius:10px;padding:16px 18px;transition:.2s}
+.srv-card:hover{border-color:var(--orange);background:var(--orange-light)}
+.srv-num{display:inline-block;background:var(--dark);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;margin-bottom:10px;font-family:'IBM Plex Mono',monospace}
+.srv-card h4{font-size:13px;font-weight:700;margin-bottom:5px;color:var(--dark)}
+.srv-card p{font-size:12px;color:var(--mid);line-height:1.5}
+
+/* ── LINKS ── */
+.links-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.ext-link{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--dark);font-size:12px;font-weight:600;background:#fff;transition:.15s}
+.ext-link:hover{border-color:var(--orange);color:var(--orange)}
+.ext-link .el-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;font-family:'IBM Plex Mono',monospace}
+.el-icon.oz{background:var(--oz)}
+.el-icon.ym{background:var(--ym)}
+.el-icon.kit{background:#ffcc00;color:#000}
+.el-icon.wb{background:var(--wb)}
+.el-icon.ref{background:var(--green)}
+
+/* ── COST SECTION ── */
+.cost-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.cost-card{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.cost-card.featured{border:2px solid var(--orange)}
+.cost-head{padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+.cost-head.wb-c{background:var(--wb);color:#fff}
+.cost-head.oz-c{background:var(--oz);color:#fff}
+.cost-head.ym-c{background:var(--ym);color:#fff}
+.cost-head h3{font-size:16px;font-weight:800}
+.cost-price{font-size:28px;font-weight:800;font-family:'IBM Plex Mono',monospace;color:#fff;line-height:1}
+.cost-price small{font-size:13px;opacity:.7}
+.cost-body{padding:20px 24px;background:#fff}
+.cost-item{display:flex;gap:10px;padding:6px 0;border-bottom:1px dashed var(--border);font-size:12px;align-items:flex-start}
+.cost-item:last-child{border-bottom:none}
+.cost-check{width:18px;height:18px;background:var(--orange);border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── PACE CHIP ── */
+.pace-chip{display:inline-block;padding:3px 10px;border-radius:10px;font-size:10px;font-weight:700}
+.pace-chip.fast{background:var(--green-bg);color:var(--green)}
+.pace-chip.med{background:var(--yellow-bg);color:var(--yellow)}
+.pace-chip.slow{background:var(--red-bg);color:var(--red)}
+
+/* ── FOOTER ── */
+.footer{background:var(--dark);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.footer-left strong{font-size:22px;font-weight:800;color:var(--orange);display:block;margin-bottom:3px;letter-spacing:-0.5px}
+.footer-left span{font-size:12px;color:#555;font-weight:500}
+.footer-cta{background:var(--orange);color:#fff;font-size:13px;font-weight:700;padding:14px 32px;border-radius:10px;text-decoration:none;display:inline-block;transition:.15s}
+.footer-cta:hover{background:var(--orange-dark)}
+
+/* ── DARK BOX ── */
+.dark-box{background:var(--dark);color:#fff;border-radius:12px;padding:20px 26px;margin-top:16px}
+.dark-box .db-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--orange);margin-bottom:10px}
+.dark-box p{font-size:13px;line-height:1.75;color:rgba(255,255,255,.75)}
+.dark-box strong{color:#fff}
+
+/* ── SUMMARY TABLE ── */
+.sum-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:20px;overflow:hidden;border-radius:8px;border:1px solid var(--border)}
+.sum-table thead tr{background:var(--dark);color:#fff}
+.sum-table thead th{padding:10px 16px;font-size:11px;font-weight:700;letter-spacing:0.04em;text-align:left}
+.sum-table thead th:not(:first-child){text-align:center}
+.sum-table tbody tr{border-bottom:1px solid var(--border)}
+.sum-table tbody tr:nth-child(even){background:var(--light)}
+.sum-table tbody td{padding:9px 16px;vertical-align:middle}
+.sum-table tbody td:not(:first-child){text-align:center}
+.sum-table tfoot tr{background:var(--dark2);color:#fff}
+.sum-table tfoot td{padding:10px 16px;font-weight:700;font-size:12px}
+.sum-table tfoot td:not(:first-child){text-align:center}
+
+/* ── CHECKLIST ── */
+.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:16px}
+.cl-item{display:flex;gap:10px;align-items:flex-start;background:var(--light);border-radius:8px;padding:12px 14px;border:1px solid var(--border)}
+.cl-num{width:22px;height:22px;background:var(--orange);border-radius:5px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:800;flex-shrink:0;font-family:'IBM Plex Mono',monospace}
+.cl-item span{font-size:12px;font-weight:600;color:var(--dark);line-height:1.45}
+
+@media(max-width:700px){
+  .header,.hero,.brief-strip,.section,.toc{padding-left:20px;padding-right:20px}
+  .mp-compare{grid-template-columns:1fr}
+  .footer{padding:28px 20px}
+  .hero h1{font-size:26px}
+  .hkpi-val{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-wordmark">
+    <div class="logo-dot">bs</div>
+    <div>
+      <div class="logo-text">bodysite</div>
+      <div class="logo-sub">ecommerce agency</div>
+    </div>
+  </div>
+  <div class="header-meta">
+    <strong>bodysite.ru</strong>
+    Стратегия запуска · Июнь 2025
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Мужские джинсы · WB / Ozon / Яндекс Маркет · Запуск с нуля</div>
+  <h1>Стратегия запуска:<br><em>категория «Мужские джинсы»</em></h1>
+  <p>Tommy Jeans · US Polo · Nautica · Levi's — 4 бренда, 6 429 единиц. Три площадки параллельно с первого дня. Реалистичный срок реализации 80% — 9–12 месяцев.</p>
+  <div class="hero-kpis">
+    <div class="hkpi"><div class="hkpi-val">6 429 шт</div><div class="hkpi-lbl">Товарный запас</div></div>
+    <div class="hkpi"><div class="hkpi-val">4 бренда</div><div class="hkpi-lbl">24 SKU по цветам</div></div>
+    <div class="hkpi"><div class="hkpi-val">1 150 ₽</div><div class="hkpi-lbl">Себестоимость</div></div>
+    <div class="hkpi"><div class="hkpi-val">~100 шт/мес</div><div class="hkpi-lbl">Реальный темп (3 бренда)</div></div>
+    <div class="hkpi"><div class="hkpi-val">≥20%</div><div class="hkpi-lbl">Целевая маржа</div></div>
+    <div class="hkpi"><div class="hkpi-val">3 площадки</div><div class="hkpi-lbl">WB · Ozon · ЯМ</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="brief-strip">
+  <div class="bs-item"><div class="bs-label">ОПФ / налоги</div><div class="bs-val">ИП <span>/ УСН 6% доходы–расходы</span></div></div>
+  <div class="bs-item"><div class="bs-label">Склад</div><div class="bs-val">Москва</div></div>
+  <div class="bs-item"><div class="bs-label">Модель</div><div class="bs-val">FBO приоритет <span>/ FBS — страховка</span></div></div>
+  <div class="bs-item"><div class="bs-label">Габариты (по ТЗ)</div><div class="bs-val">700 г / 4×30×30 <span>⚠ рекомендуем оптимизировать</span></div></div>
+  <div class="bs-item"><div class="bs-label">Целевая маржа</div><div class="bs-val">20–25% чистой прибыли</div></div>
+</div>
+
+<nav class="toc">
+  <a href="#s1">01 · Товарный стек</a>
+  <a href="#s2">02 · Аналитика рынка</a>
+  <a href="#s3">03 · Конкуренты</a>
+  <a href="#s4">04 · Выбор площадок</a>
+  <a href="#s5">05 · Юнит-экономика</a>
+  <a href="#s6">06 · Сроки реализации</a>
+  <a href="#s7">07 · Дорожная карта</a>
+  <a href="#s8">08 · Нюансы и риски</a>
+  <a href="#s9">09 · Состав работ</a>
+  <a href="#s10">10 · Стоимость</a>
+  <a href="#s11">11 · Ссылки</a>
+</nav>
+
+<!-- ════ 01 · ТОВАРНЫЙ СТЕК ════ -->
+<div class="section" id="s1">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">Товарный сток</span>
+    <span class="section-sub">4 бренда · 6 429 штук</span>
+  </div>
+  <div class="brand-grid">
+    <div class="brand-card">
+      <div class="brand-head tj"><div class="brand-name">Tommy Jeans</div><div class="brand-qty">1 500</div></div>
+      <div class="brand-body">
+        <div class="brand-row"><span>Цветов / размеров</span><span>5 × 6</span></div>
+        <div class="brand-row"><span>SKU (цвет×размер)</span><span>30</span></div>
+        <div class="brand-row"><span>Позиция бренда WB</span><span>154</span></div>
+        <div class="brand-row"><span>Конкурентная ниша</span><span>🟢 Свободная</span></div>
+        <div class="brand-row"><span>Итого штук</span><span>1 500 шт</span></div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-head usp"><div class="brand-name">US Polo</div><div class="brand-qty">1 239</div></div>
+      <div class="brand-body">
+        <div class="brand-row"><span>Цветов / размеров</span><span>6 × 6</span></div>
+        <div class="brand-row"><span>SKU (цвет×размер)</span><span>36</span></div>
+        <div class="brand-row"><span>Конкуренция</span><span>Слабые конкуренты</span></div>
+        <div class="brand-row"><span>Потолок ниши / мес</span><span>~100К ₽/модель*</span></div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-head nau"><div class="brand-name">Nautica</div><div class="brand-qty">1 390</div></div>
+      <div class="brand-body">
+        <div class="brand-row"><span>Цветов / размеров</span><span>7 × 6</span></div>
+        <div class="brand-row"><span>SKU (цвет×размер)</span><span>42</span></div>
+        <div class="brand-row"><span>Конкуренция</span><span>1 конкурент</span></div>
+        <div class="brand-row"><span>Потолок ниши / мес</span><span>~100К ₽/модель</span></div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="brand-head lev"><div class="brand-name">Levi's</div><div class="brand-qty">2 300</div></div>
+      <div class="brand-body">
+        <div class="brand-row"><span>Цветов / размеров</span><span>6 × 6</span></div>
+        <div class="brand-row"><span>SKU (цвет×размер)</span><span>36</span></div>
+        <div class="brand-row"><span>Позиция бренда WB</span><span>16 из 767</span></div>
+        <div class="brand-row"><span>Заказов бренда / мес</span><span>4 493 шт · 28,4 млн ₽</span></div>
+        <div class="brand-row"><span>Итого штук</span><span>2 300 шт</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="notice-card warn" style="margin-top:16px;border-radius:10px">
+    <div class="notice-icon">⚠️</div>
+    <div>
+      <h4>Логистические габариты: рекомендуем оптимизировать</h4>
+      <p>По ТЗ: <strong>700 г / 4×30×30 см</strong>. У конкурентов: <strong>~200 г / 30×20×4 см</strong>. Это в 3,5 раза меньше по весу. Переупаковка снизит логистические затраты на 30–50% и улучшит юнит-экономику. Рекомендуем уточнить возможность компрессионной упаковки до старта отгрузки.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 02 · АНАЛИТИКА РЫНКА ════ -->
+<div class="section" id="s2">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">Аналитика рынка</span>
+    <span class="section-sub">Mpstats · категория «Мужские джинсы» · данные за 30 дней</span>
+  </div>
+
+  <div class="mkt-grid">
+    <div class="mkt-card">
+      <div class="mkt-head wb"><h3>Wildberries</h3><small>/ мужские джинсы</small></div>
+      <div class="mkt-stats">
+        <div class="mkt-stat"><div class="sv">4,07 млрд ₽</div><div class="sk">Заказы / 30 дней</div></div>
+        <div class="mkt-stat"><div class="sv">1 475 086</div><div class="sk">Заказов, штук</div></div>
+        <div class="mkt-stat"><div class="sv">2 714 ₽</div><div class="sk">Средняя цена</div></div>
+        <div class="mkt-stat"><div class="sv">6 791</div><div class="sk">Товаров в категории</div></div>
+        <div class="mkt-stat"><div class="sv">767</div><div class="sk">Брендов</div></div>
+        <div class="mkt-stat"><div class="sv">833</div><div class="sk">Продавцов</div></div>
+        <div class="mkt-stat"><div class="sv">97%</div><div class="sk">Брендов с заказами</div></div>
+        <div class="mkt-stat"><div class="sv">223 шт</div><div class="sk">Ср. заказов на товар</div></div>
+      </div>
+    </div>
+    <div class="mkt-card">
+      <div class="mkt-head oz"><h3>Ozon</h3><small>/ мужские джинсы</small></div>
+      <div class="mkt-stats">
+        <div class="mkt-stat"><div class="sv">1,50 млрд ₽</div><div class="sk">Заказы / 30 дней</div></div>
+        <div class="mkt-stat"><div class="sv">480 581</div><div class="sk">Заказов, штук</div></div>
+        <div class="mkt-stat"><div class="sv">4 572 ₽</div><div class="sk">Средняя цена</div></div>
+        <div class="mkt-stat"><div class="sv">293 572</div><div class="sk">Товаров в категории</div></div>
+        <div class="mkt-stat"><div class="sv">1 490</div><div class="sk">Брендов</div></div>
+        <div class="mkt-stat"><div class="sv">12 290</div><div class="sk">Продавцов</div></div>
+        <div class="mkt-stat"><div class="sv">14%</div><div class="sk">Продавцов с заказами</div></div>
+        <div class="mkt-stat"><div class="sv">38 600 ₽</div><div class="sk">Ср. заказ/продавец</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ценовая сегментация WB -->
+  <div class="seg-wrap">
+    <div class="seg-title">Ценовая сегментация WB — пик спроса 3 100–3 500 ₽ · наш сегмент 6 000+ ₽ (premium niche)</div>
+    <div class="seg-bars">
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:30%"></div><div class="seg-lbl">2 000</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:35%"></div><div class="seg-lbl">2 200</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:50%"></div><div class="seg-lbl">2 400</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:45%"></div><div class="seg-lbl">2 600</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:55%"></div><div class="seg-lbl">2 800</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:65%"></div><div class="seg-lbl">3 000</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar active" style="height:100%"></div><div class="seg-lbl" style="color:var(--orange);font-weight:700">3 250★</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar active" style="height:90%"></div><div class="seg-lbl" style="color:var(--orange);font-weight:700">3 400★</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:55%"></div><div class="seg-lbl">3 500</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:65%"></div><div class="seg-lbl">3 700</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:45%"></div><div class="seg-lbl">4 200</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar highlight" style="height:25%"></div><div class="seg-lbl" style="color:var(--red);font-weight:700">5 000+</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar highlight" style="height:18%"></div><div class="seg-lbl" style="color:var(--red);font-weight:700">6 000+</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar highlight" style="height:10%"></div><div class="seg-lbl" style="color:var(--red);font-weight:700">8 000+</div></div>
+    </div>
+    <div class="seg-note">
+      <strong style="color:var(--orange)">Пик спроса WB</strong> — сегмент 3 100–3 400 ₽ (массмаркет, высокая конкуренция).
+      <strong style="color:var(--red)"> Наш ценовой сегмент 6 000–12 000 ₽</strong> — объём заказов ниже, но <strong>меньше конкурентов, выше средний чек, выше маржа</strong>. Стратегия: premium niche, работа с брендовым трафиком.
+    </div>
+  </div>
+
+  <!-- Ценовая сегментация Ozon -->
+  <div class="seg-wrap">
+    <div class="seg-title">Ценовая сегментация Ozon — пик 3 500–4 000 ₽ · наш сегмент органичнее для платформы (средняя 4 572 ₽)</div>
+    <div class="seg-bars">
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:15%"></div><div class="seg-lbl">2 000</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:25%"></div><div class="seg-lbl">2 500</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:45%"></div><div class="seg-lbl">3 000</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar active" style="height:100%"></div><div class="seg-lbl" style="color:var(--orange);font-weight:700">3 500★</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar active" style="height:95%"></div><div class="seg-lbl" style="color:var(--orange);font-weight:700">3 750★</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar active" style="height:85%"></div><div class="seg-lbl" style="color:var(--orange);font-weight:700">4 000★</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:60%"></div><div class="seg-lbl">4 300</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar" style="height:40%"></div><div class="seg-lbl">4 700</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar highlight" style="height:28%"></div><div class="seg-lbl" style="color:var(--red);font-weight:700">5 500+</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar highlight" style="height:20%"></div><div class="seg-lbl" style="color:var(--red);font-weight:700">6 000+</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar highlight" style="height:10%"></div><div class="seg-lbl" style="color:var(--red);font-weight:700">8 000+</div></div>
+      <div class="seg-bar-wrap"><div class="seg-bar highlight" style="height:4%"></div><div class="seg-lbl" style="color:var(--red);font-weight:700">12К+</div></div>
+    </div>
+    <div class="seg-note">
+      Ozon в среднем дороже WB (4 572 ₽ vs 2 714 ₽). <strong style="color:var(--red)">Наш ценовой диапазон 6 000–12 000 ₽</strong> на Ozon более органичен — покупатели готовы платить больше. Особенно актуально для <strong>Levi's и Tommy Jeans</strong>.
+    </div>
+  </div>
+
+  <!-- Сезонность -->
+  <div class="seg-wrap">
+    <div class="seg-title">Годовая сезонность продаж (WB) — пик март–апрель и август · провал июнь–июль</div>
+    <div class="season-grid">
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--red)">−16</div><div class="s-bar neg" style="height:48px"></div><div class="s-lbl">Янв</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--red)">−7</div><div class="s-bar neg" style="height:21px"></div><div class="s-lbl">Фев</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+26</div><div class="s-bar pos" style="height:60px"></div><div class="s-lbl" style="color:var(--green);font-weight:700">Мар ★</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+20</div><div class="s-bar pos" style="height:46px"></div><div class="s-lbl" style="color:var(--green);font-weight:700">Апр ★</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+4</div><div class="s-bar pos" style="height:12px"></div><div class="s-lbl">Май</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--red)">−22</div><div class="s-bar neg" style="height:42px"></div><div class="s-lbl" style="color:var(--red)">Июн ▼</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--red)">−34</div><div class="s-bar neg" style="height:60px"></div><div class="s-lbl" style="color:var(--red);font-weight:700">Июл ▼</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+11</div><div class="s-bar pos" style="height:26px"></div><div class="s-lbl" style="color:var(--green);font-weight:700">Авг ★</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+5</div><div class="s-bar pos" style="height:12px"></div><div class="s-lbl">Сен</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+5</div><div class="s-bar pos" style="height:12px"></div><div class="s-lbl">Окт</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+3</div><div class="s-bar pos" style="height:9px"></div><div class="s-lbl">Ноя</div></div>
+      <div class="s-bar-wrap"><div class="s-val" style="color:var(--green)">+1</div><div class="s-bar pos" style="height:6px"></div><div class="s-lbl">Дек</div></div>
+    </div>
+    <div class="seg-note">
+      ⚡ <strong>Критично для планирования:</strong> запуск в июне–июле попадает в провал сезонности (−22%..−34%). Слабые стартовые продажи — норма. Пик придётся на <strong>август–октябрь</strong>. Важно занять позиции в карточках <strong>ДО сезона</strong>, чтобы встретить пик с готовым ранжированием и отзывами.
+    </div>
+  </div>
+</div>
+
+<!-- ════ 03 · КОНКУРЕНТЫ ════ -->
+<div class="section" id="s3">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">Анализ конкурентов</span>
+    <span class="section-sub">Топ позиции · данные за 30 дней · с ссылками на артикулы</span>
+  </div>
+  <div class="comp-table-wrap">
+    <table class="ctable">
+      <thead>
+        <tr>
+          <th>Площадка</th>
+          <th>Товар / Артикул</th>
+          <th>Выручка / 30 дней</th>
+          <th>Остаток</th>
+          <th>Темп</th>
+          <th>Комментарий</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge-mp wb">WB</span></td>
+          <td>Конкурент #1 · мужские джинсы<a href="https://www.wildberries.ru/catalog/710055074/detail.aspx" target="_blank" class="art-link">→ арт. 710055074</a></td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:80px"></div><div class="rev-val">1 148 909 ₽</div></div></td>
+          <td>2 шт ⚠</td>
+          <td><span class="pace-chip fast">Горит</span></td>
+          <td>Дефицит. Можно перехватить долю</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp wb">WB</span></td>
+          <td>Конкурент #2 · мужские джинсы<a href="https://www.wildberries.ru/catalog/142910966/detail.aspx" target="_blank" class="art-link">→ арт. 142910966</a></td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:49px"></div><div class="rev-val">700 032 ₽</div></div></td>
+          <td>65 шт</td>
+          <td><span class="pace-chip med">Средний</span></td>
+          <td>Стабильные продажи, нормальный остаток</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp wb">WB</span></td>
+          <td>Конкурент #3 · мужские джинсы<a href="https://www.wildberries.ru/catalog/525216460/detail.aspx" target="_blank" class="art-link">→ арт. 525216460</a></td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:78px"></div><div class="rev-val">1 119 132 ₽</div></div></td>
+          <td>42 шт</td>
+          <td><span class="pace-chip fast">Высокий</span></td>
+          <td>Близко к дефициту, высокий темп продаж</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp wb">WB</span></td>
+          <td>Tommy Jeans (бренд WB) · поз. 154</td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:5px;background:#0d0d1f"></div><div class="rev-val">724 283 ₽</div></div></td>
+          <td>826 SKU</td>
+          <td><span class="pace-chip fast">Ниша свободна</span></td>
+          <td>🟢 73 заказа / мес · ср. цена 12 105 ₽</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp wb">WB</span></td>
+          <td>Levi's® (бренд WB) · поз. 16</td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:80px;background:#c8102e"></div><div class="rev-val">28 457 328 ₽</div></div></td>
+          <td>1 748 SKU</td>
+          <td><span class="pace-chip fast">Топ бренд</span></td>
+          <td>4 493 заказа/мес · ср. цена 6 469 ₽</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp wb">WB</span></td>
+          <td>US Polo / Nautica</td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:7px"></div><div class="rev-val">до 100 000 ₽</div></div></td>
+          <td>—</td>
+          <td><span class="pace-chip med">Слабые</span></td>
+          <td>⚡ Конкуренты не работают с контентом — наш шанс</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp oz">OZ</span></td>
+          <td>Wrangler Original Straight<a href="https://www.ozon.ru/product/dzhinsy-wrangler-original-straight-zelenaya-varka-1894889872/" target="_blank" class="art-link">→ арт. 1894889872</a></td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:20px;background:var(--oz)"></div><div class="rev-val">289 105 ₽</div></div></td>
+          <td>41 шт</td>
+          <td><span class="pace-chip med">Средний</span></td>
+          <td>Стабильный спрос, запас нормальный</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp oz">OZ</span></td>
+          <td>Cave Jeans<a href="https://www.ozon.ru/product/dzhinsy-cave-3618552331/" target="_blank" class="art-link">→ арт. 3618552331</a></td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:20px;background:var(--oz)"></div><div class="rev-val">282 851 ₽</div></div></td>
+          <td>264 шт</td>
+          <td><span class="pace-chip slow">Низкий</span></td>
+          <td>Большой остаток — медленная оборачиваемость</td>
+        </tr>
+        <tr>
+          <td><span class="badge-mp oz">OZ</span></td>
+          <td>Levi's® 501 Straight Fit<a href="https://www.ozon.ru/product/dzhinsy-levi-s-501-straight-fit-muzhskie-sinie-3575622534/" target="_blank" class="art-link">→ арт. 3575622534</a></td>
+          <td><div class="rev-bar"><div class="rev-fill" style="width:18px;background:var(--oz)"></div><div class="rev-val">256 424 ₽</div></div></td>
+          <td>1 шт ⚠</td>
+          <td><span class="pace-chip fast">Дефицит!</span></td>
+          <td>🔥 Критический остаток — зайти прямо сейчас</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="notice-grid" style="margin-top:16px">
+    <div class="notice-card success"><div class="notice-icon">🟢</div><div><h4>Tommy Jeans — монополия</h4><p>73 заказа/мес на весь бренд. При хорошем контенте — топ без конкурентной борьбы. Аукцион на рекламу минимальный.</p></div></div>
+    <div class="notice-card success"><div class="notice-icon">🔥</div><div><h4>Levi's Ozon — зайти сейчас</h4><p>Конкурент с 1 шт в остатке уйдёт в OOS. Покупатели будут искать альтернативу. Наш Levi's должен быть в карточках к этому моменту.</p></div></div>
+    <div class="notice-card warn"><div class="notice-icon">⚠️</div><div><h4>US Polo / Nautica: контент — решает</h4><p>Конкуренты работают с некачественными фото. Профессиональный контент даёт прямое преимущество без ценовой войны.</p></div></div>
+  </div>
+</div>
+
+<!-- ════ 04 · ПЛОЩАДКИ ════ -->
+<div class="section" id="s4">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">Выбор площадок</span>
+    <span class="section-sub">Запуск всех трёх параллельно с месяца 1</span>
+  </div>
+  <div class="mp-compare">
+    <div class="mpc-col">
+      <div class="mpc-head rec">
+        <div class="mp-badge wb">WB</div>
+        <div><h3>Wildberries</h3><small>Основная площадка</small><div class="rec-tag">★ ПРИОРИТЕТ</div></div>
+      </div>
+      <div class="mpc-body">
+        <div class="mpc-stat"><span class="lbl">Комиссия FBO (склад WB)</span><span class="val">34,5%</span></div>
+        <div class="mpc-stat"><span class="lbl">Комиссия FBS</span><span class="val">38%</span></div>
+        <div class="mpc-stat"><span class="lbl">Оборот категории / мес</span><span class="val">4,07 млрд ₽</span></div>
+        <div class="mpc-stat"><span class="lbl">Средняя цена</span><span class="val">2 714 ₽</span></div>
+        <div class="mpc-stat"><span class="lbl">Знак «Оригинал»</span><span class="val good">По документам</span></div>
+        <div class="mpc-stat"><span class="lbl">Levi's — позиция бренда</span><span class="val good">16 из 767</span></div>
+      </div>
+      <div class="mpc-pros">
+        <div class="mpc-pro">Наибольший трафик в категории</div>
+        <div class="mpc-pro">Tommy Jeans — ниша без конкурентов</div>
+        <div class="mpc-pro">Levi's — бренд уже на позиции 16</div>
+        <div class="mpc-pro">Комиссия ниже Ozon</div>
+        <div class="mpc-con">Основной спрос в дешёвом сегменте</div>
+        <div class="mpc-con">Акции влияют на позиции ранжирования</div>
+      </div>
+    </div>
+    <div class="mpc-col">
+      <div class="mpc-head">
+        <div class="mp-badge ozon">OZ</div>
+        <div><h3>Ozon</h3><small>Параллельный запуск</small></div>
+      </div>
+      <div class="mpc-body">
+        <div class="mpc-stat"><span class="lbl">Комиссия FBO</span><span class="val bad">47%</span></div>
+        <div class="mpc-stat"><span class="lbl">Комиссия FBS</span><span class="val bad">53%</span></div>
+        <div class="mpc-stat"><span class="lbl">Оборот категории / мес</span><span class="val">1,50 млрд ₽</span></div>
+        <div class="mpc-stat"><span class="lbl">Средняя цена</span><span class="val good">4 572 ₽</span></div>
+        <div class="mpc-stat"><span class="lbl">Соинвестирование</span><span class="val">~20–45% от Ozon</span></div>
+        <div class="mpc-stat"><span class="lbl">Знак «Оригинал»</span><span class="val bad">Обеспечительный платёж</span></div>
+      </div>
+      <div class="mpc-pros">
+        <div class="mpc-pro">Средняя цена выше — наш сегмент органичнее</div>
+        <div class="mpc-pro">Levi's: конкурент уходит в OOS</div>
+        <div class="mpc-pro">Соинвестирование снижает цену для покупателя</div>
+        <div class="mpc-pro">Ozon Select — дополнительный буст</div>
+        <div class="mpc-con">Комиссия 47% — давление на маржу</div>
+        <div class="mpc-con">Только 14% продавцов имеют заказы</div>
+      </div>
+    </div>
+    <div class="mpc-col">
+      <div class="mpc-head">
+        <div class="mp-badge ym">ЯМ</div>
+        <div><h3>Яндекс Маркет</h3><small>+ Яндекс Кит (сайт)</small></div>
+      </div>
+      <div class="mpc-body">
+        <div class="mpc-stat"><span class="lbl">Данные по категории</span><span class="val bad">Отсутствуют</span></div>
+        <div class="mpc-stat"><span class="lbl">Конкуренция</span><span class="val good">Меньше</span></div>
+        <div class="mpc-stat"><span class="lbl">Сплит-оплата</span><span class="val good">Есть (для дорогих)</span></div>
+        <div class="mpc-stat"><span class="lbl">Знак «Оригинал»</span><span class="val good">Доступен</span></div>
+        <div class="mpc-stat"><span class="lbl">Яндекс Кит (сайт)</span><span class="val">Обсуждается</span></div>
+        <div class="mpc-stat"><span class="lbl">Аудитория</span><span class="val">Лояльная покупатели</span></div>
+      </div>
+      <div class="mpc-pros">
+        <div class="mpc-pro">Меньше конкуренции в категории</div>
+        <div class="mpc-pro">Сплит — для нашего ценового сегмента</div>
+        <div class="mpc-pro">Яндекс Кит — брендовая витрина</div>
+        <div class="mpc-con">Нет аналитики по категории</div>
+        <div class="mpc-con">Меньший трафик, чем WB и Ozon</div>
+        <div class="mpc-con">Требует тестирования</div>
+      </div>
+    </div>
+  </div>
+  <div class="verdict">
+    <div class="verdict-icon">🏆</div>
+    <div>
+      <h3>Вердикт: три площадки с первого дня — диверсификация каналов обязательна</h3>
+      <p>При реальном темпе ~100 шт/мес на бренд (US Polo, Nautica, Tommy Jeans) параллельный запуск на трёх площадках критически важен для достижения 80%. WB — основной канал по трафику. Ozon — особенно важен для Levi's (дефицит у конкурентов) и Tommy Jeans (выше средний чек). ЯМ — дополнительный объём и сплит-оплата. Суммарный темп продаж по трём площадкам позволяет достичь цели быстрее.</p>
+      <div class="tags">
+        <span class="tag">WB — основной трафик</span>
+        <span class="tag">Ozon — Levi's + Tommy Jeans</span>
+        <span class="tag">ЯМ — доп. канал + сплит</span>
+        <span class="tag">FBO на всех площадках</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 05 · ЮНИТ-ЭКОНОМИКА ════ -->
+<div class="section" id="s5">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title">Юнит-экономика</span>
+    <span class="section-sub">Расчёт по данным калькуляторов площадок · цена 6 000 ₽</span>
+  </div>
+  <div class="ue-grid">
+    <div class="ue-card">
+      <div class="ue-head"><strong>Wildberries · FBO · Электросталь</strong><span>Склад WB</span></div>
+      <div class="ue-rows">
+        <div class="ue-row"><span class="k">Цена товара</span><span class="v">6 000 ₽</span></div>
+        <div class="ue-row"><span class="k">Расходы WB (42,57%)</span><span class="v neg">−2 554 ₽</span></div>
+        <div class="ue-row"><span class="k">К переводу за товар</span><span class="v">3 446 ₽</span></div>
+        <div class="ue-row"><span class="k">Налог УСН (1,40%)</span><span class="v neg">−84 ₽</span></div>
+        <div class="ue-row"><span class="k">Себестоимость</span><span class="v neg">−1 150 ₽</span></div>
+        <div class="ue-row"><span class="k">Расходы на продвижение (15%)</span><span class="v neg">−900 ₽</span></div>
+      </div>
+      <div class="ue-total"><div class="tl">Прибыль / шт</div><div class="tv pos">1 312 ₽ · 21,87%</div></div>
+      <div class="ue-note">✅ Цель 20–25% достигается. Источник: калькулятор WB при цене 6 000 ₽.</div>
+    </div>
+    <div class="ue-card">
+      <div class="ue-head"><strong>Wildberries · FBO · Подольск МП</strong><span>Везу 30 ч</span></div>
+      <div class="ue-rows">
+        <div class="ue-row"><span class="k">Цена товара</span><span class="v">6 000 ₽</span></div>
+        <div class="ue-row"><span class="k">Расходы WB (44,70%)</span><span class="v neg">−2 682 ₽</span></div>
+        <div class="ue-row"><span class="k">К переводу за товар</span><span class="v">3 318 ₽</span></div>
+        <div class="ue-row"><span class="k">Налог УСН (1,27%)</span><span class="v neg">−76 ₽</span></div>
+        <div class="ue-row"><span class="k">Себестоимость</span><span class="v neg">−1 150 ₽</span></div>
+        <div class="ue-row"><span class="k">Расходы на продвижение (15%)</span><span class="v neg">−900 ₽</span></div>
+      </div>
+      <div class="ue-total"><div class="tl">Прибыль / шт</div><div class="tv warn">1 192 ₽ · 19,87%</div></div>
+      <div class="ue-note">⚠ Чуть ниже цели. Рекомендуем Электросталь или цену 6 500 ₽.</div>
+    </div>
+    <div class="ue-card">
+      <div class="ue-head"><strong>Ozon · FBO</strong><span>При цене 6 000 ₽</span></div>
+      <div class="ue-rows">
+        <div class="ue-row"><span class="k">Цена товара</span><span class="v">6 000 ₽</span></div>
+        <div class="ue-row"><span class="k">Вознаграждение Ozon (47%)</span><span class="v neg">−2 820 ₽</span></div>
+        <div class="ue-row"><span class="k">Эквайринг (1%)</span><span class="v neg">−60 ₽</span></div>
+        <div class="ue-row"><span class="k">Обработка и доставка</span><span class="v neg">−113 ₽</span></div>
+        <div class="ue-row"><span class="k">Возвраты и отмены</span><span class="v neg">−62 ₽</span></div>
+        <div class="ue-row"><span class="k">Себестоимость</span><span class="v neg">−1 150 ₽</span></div>
+        <div class="ue-row"><span class="k">Налог на прибыль</span><span class="v neg">−240 ₽</span></div>
+      </div>
+      <div class="ue-total"><div class="tl">Прибыль / шт</div><div class="tv pos">1 555 ₽ · 26%</div></div>
+      <div class="ue-note">✅ FBO Ozon при 6 000 ₽ даёт 26% — в цели. FBS: 1 165 ₽ / 19%.</div>
+    </div>
+  </div>
+  <div class="dark-box">
+    <div class="db-label">Вывод по юнит-экономике</div>
+    <p>При цене <strong>6 000 ₽</strong> цель 20–25% достижима на WB FBO (Электросталь) и Ozon FBO. Для Tommy Jeans со средней ценой конкурентов <strong>12 105 ₽</strong> маржа будет существенно выше. Для участия в акциях без потери маржи рекомендуем выставлять цены с <strong>20–25% пространством для скидки</strong>: стартовая цена карточки <strong>7 500–8 000 ₽</strong>.</p>
+  </div>
+</div>
+
+<!-- ════ 06 · РЕАЛЬНЫЕ СРОКИ ════ -->
+<div class="section" id="s6">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title">Реальные сроки реализации</span>
+    <span class="section-sub">Честный прогноз с учётом аналитики · все 3 площадки суммарно</span>
+  </div>
+
+  <div class="notice-card danger" style="border-radius:10px;margin-bottom:20px">
+    <div class="notice-icon">⚠️</div>
+    <div><h4>Важно: цель 80% за 6 месяцев требует корректировки</h4><p>При потолке ниши ~100 шт/мес (US Polo, Nautica, Tommy Jeans) и суммарном стоке 6 429 шт — реализовать 80% за 6 месяцев в рамках трёх слабых ниш <strong>невозможно</strong>. Levi's — реальный локомотив. Ниже честный прогноз по каждому бренду с учётом сезонности и трёх площадок суммарно.</p></div>
+  </div>
+
+  <div class="real-grid">
+    <div class="real-card">
+      <div class="real-head tj"><strong>Tommy Jeans</strong><span style="font-size:12px;opacity:.7">1 500 шт</span></div>
+      <div class="real-body">
+        <div class="real-row"><span class="rk">Темп / мес (WB+Ozon+ЯМ)</span><span class="rv">~80–120 шт</span></div>
+        <div class="real-row"><span class="rk">Месяц 1–2 (раскачка)</span><span class="rv warn">20–50 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Месяц 3+ (стабильно)</span><span class="rv">80–120 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Продажи за 6 мес</span><span class="rv warn">~500–650 шт</span></div>
+        <div class="real-row"><span class="rk">% реализации за 6 мес</span><span class="rv warn">33–43%</span></div>
+        <div class="real-row"><span class="rk">Прогноз срока на 80%</span><span class="rv bad">~12–15 месяцев</span></div>
+        <div class="pb-wrap">
+          <div class="pb-label">Реализация за 6 мес</div>
+          <div class="pb"><div class="pb-fill orange" style="width:38%"></div></div>
+          <div class="pb-pct" style="color:var(--orange)">~38%</div>
+        </div>
+        <div style="font-size:11px;color:#aaa;margin-top:8px;line-height:1.5">Ниша свободная, но ёмкость ограничена. Плюс: высокая цена (~12 000 ₽) → выручка оправдывает длинный срок.</div>
+      </div>
+    </div>
+    <div class="real-card">
+      <div class="real-head usp"><strong>US Polo</strong><span style="font-size:12px;opacity:.7">1 239 шт</span></div>
+      <div class="real-body">
+        <div class="real-row"><span class="rk">Темп / мес (WB+Ozon+ЯМ)</span><span class="rv">~80–120 шт</span></div>
+        <div class="real-row"><span class="rk">Месяц 1–2 (раскачка)</span><span class="rv warn">20–40 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Месяц 3+ (стабильно)</span><span class="rv">80–120 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Продажи за 6 мес</span><span class="rv warn">~450–600 шт</span></div>
+        <div class="real-row"><span class="rk">% реализации за 6 мес</span><span class="rv warn">36–48%</span></div>
+        <div class="real-row"><span class="rk">Прогноз срока на 80%</span><span class="rv bad">~9–12 месяцев</span></div>
+        <div class="pb-wrap">
+          <div class="pb-label">Реализация за 6 мес</div>
+          <div class="pb"><div class="pb-fill orange" style="width:42%"></div></div>
+          <div class="pb-pct" style="color:var(--orange)">~42%</div>
+        </div>
+        <div style="font-size:11px;color:#aaa;margin-top:8px;line-height:1.5">Конкуренты слабые — качественный контент даст преимущество. Потолок ниши ограничивает темп.</div>
+      </div>
+    </div>
+    <div class="real-card">
+      <div class="real-head nau"><strong>Nautica</strong><span style="font-size:12px;opacity:.7">1 390 шт</span></div>
+      <div class="real-body">
+        <div class="real-row"><span class="rk">Темп / мес (WB+Ozon+ЯМ)</span><span class="rv">~80–100 шт</span></div>
+        <div class="real-row"><span class="rk">Месяц 1–2 (раскачка)</span><span class="rv warn">15–35 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Месяц 3+ (стабильно)</span><span class="rv">80–100 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Продажи за 6 мес</span><span class="rv warn">~400–520 шт</span></div>
+        <div class="real-row"><span class="rk">% реализации за 6 мес</span><span class="rv bad">29–37%</span></div>
+        <div class="real-row"><span class="rk">Прогноз срока на 80%</span><span class="rv bad">~13–16 месяцев</span></div>
+        <div class="pb-wrap">
+          <div class="pb-label">Реализация за 6 мес</div>
+          <div class="pb"><div class="pb-fill red" style="width:33%"></div></div>
+          <div class="pb-pct" style="color:var(--red)">~33%</div>
+        </div>
+        <div style="font-size:11px;color:#aaa;margin-top:8px;line-height:1.5">Один конкурент на WB. Наиболее медленная ниша. Рекомендуем перераспределить рекламный бюджет в пользу Levi's.</div>
+      </div>
+    </div>
+    <div class="real-card">
+      <div class="real-head lev"><strong>Levi's</strong><span style="font-size:12px;opacity:.7">2 300 шт</span></div>
+      <div class="real-body">
+        <div class="real-row"><span class="rk">Темп / мес (WB+Ozon+ЯМ)</span><span class="rv good">~300–500 шт</span></div>
+        <div class="real-row"><span class="rk">Месяц 1–2 (раскачка)</span><span class="rv warn">50–100 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Месяц 3+ (стабильно)</span><span class="rv good">300–500 шт/мес</span></div>
+        <div class="real-row"><span class="rk">Продажи за 6 мес</span><span class="rv good">~1 400–2 000 шт</span></div>
+        <div class="real-row"><span class="rk">% реализации за 6 мес</span><span class="rv good">61–87%</span></div>
+        <div class="real-row"><span class="rk">Прогноз срока на 80%</span><span class="rv good">~5–7 месяцев</span></div>
+        <div class="pb-wrap">
+          <div class="pb-label">Реализация за 6 мес</div>
+          <div class="pb"><div class="pb-fill green" style="width:74%"></div></div>
+          <div class="pb-pct" style="color:var(--green)">~74%</div>
+        </div>
+        <div style="font-size:11px;color:#aaa;margin-top:8px;line-height:1.5">Levi's — локомотив всей стратегии. Позиция 16 на WB, 4 493 заказа/мес по бренду. Знак «Оригинал» + контент = реалистичный темп.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Итоговая сводная таблица -->
+  <div style="overflow-x:auto">
+    <table class="sum-table">
+      <thead>
+        <tr>
+          <th>Бренд</th>
+          <th>Сток</th>
+          <th>Темп / мес</th>
+          <th>Продажи 6 мес</th>
+          <th>% за 6 мес</th>
+          <th>Срок 80%</th>
+          <th>Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700">Tommy Jeans</td>
+          <td>1 500</td>
+          <td>80–120</td>
+          <td>500–650</td>
+          <td style="color:var(--yellow);font-weight:700">33–43%</td>
+          <td style="color:var(--red);font-weight:700">12–15 мес</td>
+          <td><span class="pace-chip slow">⚠ Долго</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:700">US Polo</td>
+          <td>1 239</td>
+          <td>80–120</td>
+          <td>450–600</td>
+          <td style="color:var(--yellow);font-weight:700">36–48%</td>
+          <td style="color:var(--red);font-weight:700">9–12 мес</td>
+          <td><span class="pace-chip med">⚠ Медленно</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:700">Nautica</td>
+          <td>1 390</td>
+          <td>80–100</td>
+          <td>400–520</td>
+          <td style="color:var(--red);font-weight:700">29–37%</td>
+          <td style="color:var(--red);font-weight:700">13–16 мес</td>
+          <td><span class="pace-chip slow">🔴 Риск</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:700">Levi's</td>
+          <td>2 300</td>
+          <td>300–500</td>
+          <td>1 400–2 000</td>
+          <td style="color:var(--green);font-weight:700">61–87%</td>
+          <td style="color:var(--green);font-weight:700">5–7 мес</td>
+          <td><span class="pace-chip fast">✅ В цели</span></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>ИТОГО</td>
+          <td>6 429</td>
+          <td>550–850</td>
+          <td>2 750–3 770</td>
+          <td style="color:var(--orange)">43–59%</td>
+          <td>9–12 мес</td>
+          <td><span class="pace-chip med" style="border:1px solid #fff">Реалистичный срок</span></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="dark-box">
+    <div class="db-label">Ключевой вывод по срокам</div>
+    <p>Реалистичный срок реализации <strong>80% товарного запаса — 9–12 месяцев</strong> при старте на трёх площадках одновременно. Levi's закрывается за 5–7 месяцев, три остальных бренда — 9–16 месяцев. Для ускорения реализации US Polo / Nautica / Tommy Jeans рекомендуем рассмотреть акции площадок, самовыкупы в первые 2 месяца и агрессивную ставку в рекламе на старте.</p>
+  </div>
+</div>
+
+<!-- ════ 07 · ДОРОЖНАЯ КАРТА ════ -->
+<div class="section" id="s7">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <span class="section-title">Дорожная карта</span>
+    <span class="section-sub">6-месячный план · с момента старта</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">Мес. 1 · Фундамент</div>
+      <div class="tl-title">Регистрация кабинетов, карточки, контент, первая отгрузка</div>
+      <div class="tl-desc">Регистрация кабинетов на WB + Ozon + ЯМ. Создание карточек с SEO-оптимизацией и правильной структурой характеристик. Склейка по цветам и размерам. ТЗ на фото/видеосъёмку. Расчёт UNIT-экономики. Отгрузка стартовой партии (приоритет: Levi's).</div>
+      <div class="tl-stats">
+        <span class="tl-stat">Levi's — приоритет</span>
+        <span class="tl-stat">FBO на WB и Ozon</span>
+        <span class="tl-stat">Раскачка через самовыкупы</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">Мес. 2 · Запуск и первые позиции</div>
+      <div class="tl-title">Реклама, самовыкупы, тестирование главного фото</div>
+      <div class="tl-desc">Запуск внутренней рекламы (WB: автореклама + CPM, Ozon: трафарет). Самовыкупы для разгона позиций в первые недели. A/B тестирование главного фото. Подача документов на знак «Оригинал» WB. Отгрузка Tommy Jeans.</div>
+      <div class="tl-stats">
+        <span class="tl-stat">~100–200 шт продаж (Levi's)</span>
+        <span class="tl-stat">Знак «Оригинал» WB</span>
+        <span class="tl-stat">А/Б тест фото</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">Мес. 3 · Сезонный подъём (Август)</div>
+      <div class="tl-title">Усиление рекламы под сезон, US Polo + Nautica отгрузка</div>
+      <div class="tl-desc">Август — пик спроса (+11%). Увеличение ставок. Участие в акциях площадок. Отгрузка US Polo и Nautica. Анализ конверсии карточек и корректировка контента. Подача заявки на Ozon Select (если применимо).</div>
+      <div class="tl-stats">
+        <span class="tl-stat">Сезонный пик</span>
+        <span class="tl-stat">Все 4 бренда активны</span>
+        <span class="tl-stat">Ozon Select</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">Мес. 4–5 · Оптимизация</div>
+      <div class="tl-title">Масштабирование успешных связок, работа с отзывами</div>
+      <div class="tl-desc">Масштабирование успешных рекламных связок. Работа с отзывами и рейтингом карточек. Дозаказ стоков при необходимости. Участие в 11.11 и других распродажах. Анализ и перераспределение бюджета в пользу лидеров продаж.</div>
+      <div class="tl-stats">
+        <span class="tl-stat">Levi's: ~80% реализации</span>
+        <span class="tl-stat">Ноябрь: 11.11</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot grey"></div>
+      <div class="tl-month">Мес. 6+ · Масштаб и рост</div>
+      <div class="tl-title">Итоги, дополнительные инструменты, планирование следующей партии</div>
+      <div class="tl-desc">Итоговый анализ. US Polo/Nautica/Tommy Jeans — продолжение реализации. Планирование новой закупки на основе данных о лидерах продаж. Расширение ассортимента моделей. Сайт Яндекс Кит при достижении плановых показателей.</div>
+      <div class="tl-stats">
+        <span class="tl-stat">Яндекс Кит запуск</span>
+        <span class="tl-stat">Новая закупка</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 08 · НЮАНСЫ И РИСКИ ════ -->
+<div class="section" id="s8">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <span class="section-title">Нюансы и риски</span>
+    <span class="section-sub">Важные детали перед стартом</span>
+  </div>
+  <div class="notice-grid">
+    <div class="notice-card warn">
+      <div class="notice-icon">🏅</div>
+      <div>
+        <h4>Знак «Оригинал» WB</h4>
+        <p>Можно получить, предоставив документы правообладателя товарного знака. <a href="https://seller.wildberries.ru/instructions/ru/ru/material/original-mark#%D0%BA%D1%82%D0%BE-%D0%BC%D0%BE%D0%B6%D0%B5%D1%82-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%C2%AB%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%C2%BB" target="_blank">Инструкция WB →</a> Даёт дополнительное доверие и буст в ранжировании. Рекомендуем оформить с первого месяца.</p>
+      </div>
+    </div>
+    <div class="notice-card warn">
+      <div class="notice-icon">🛡️</div>
+      <div>
+        <h4>Знак «Оригинал» Ozon</h4>
+        <p>Только правообладателям товарного знака или при внесении обеспечительного платежа (индивидуальный расчёт). Открывает доступ в <a href="https://seller-edu.ozon.ru/ozon-select/nachalo-raboty-na-platforme-selekt" target="_blank">Ozon Select</a>.</p>
+      </div>
+    </div>
+    <div class="notice-card info">
+      <div class="notice-icon">📦</div>
+      <div>
+        <h4>Соинвестирование Ozon</h4>
+        <p>Ozon может участвовать в скидке на витрине от 20 до 45% по своему усмотрению. Это снижает фактическую цену для покупателя без потери маржи продавца. Требует уточнения у площадки.</p>
+      </div>
+    </div>
+    <div class="notice-card info">
+      <div class="notice-icon">📦</div>
+      <div>
+        <h4>Логистика: оптимизируйте упаковку</h4>
+        <p>Текущие данные: 700 г / 4×30×30 см. У конкурентов: 200 г / 30×20×4 см. Переупаковка снизит тариф хранения и доставки на 30–50%. Приоритет до старта отгрузки.</p>
+      </div>
+    </div>
+    <div class="notice-card success">
+      <div class="notice-icon">💰</div>
+      <div>
+        <h4>Сплит-оплата на Яндекс Маркет</h4>
+        <p>Для товаров выше 5 000 ₽ сплит-оплата существенно увеличивает конверсию. Наш ценовой сегмент идеально подходит для этого инструмента.</p>
+      </div>
+    </div>
+    <div class="notice-card danger">
+      <div class="notice-icon">📉</div>
+      <div>
+        <h4>Сезонность: июнь–июль — провал</h4>
+        <p>Старт в июне = слабые первые продажи (−22%..−34% от нормы). Это нормально и запланировано. Главная задача — занять позиции до сезонного пика в августе.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 09 · СОСТАВ РАБОТ ════ -->
+<div class="section" id="s9">
+  <div class="section-header">
+    <span class="section-num">09</span>
+    <span class="section-title">Состав работ</span>
+    <span class="section-sub">Полный план по выходу на площадки</span>
+  </div>
+  <div class="checklist">
+    <div class="cl-item"><div class="cl-num">01</div><span>Регистрация кабинета продавца на маркетплейсе</span></div>
+    <div class="cl-item"><div class="cl-num">02</div><span>Создание карточек товара</span></div>
+    <div class="cl-item"><div class="cl-num">03</div><span>Наполнение характеристиками и описаниями</span></div>
+    <div class="cl-item"><div class="cl-num">04</div><span>SEO-оптимизация карточек (ключевые запросы)</span></div>
+    <div class="cl-item"><div class="cl-num">05</div><span>Склейка карточек по цветам и размерам</span></div>
+    <div class="cl-item"><div class="cl-num">06</div><span>ТЗ на фото/видеосъёмку товара</span></div>
+    <div class="cl-item"><div class="cl-num">07</div><span>Установка изображений в карточки</span></div>
+    <div class="cl-item"><div class="cl-num">08</div><span>Создание слайда с размерной сеткой</span></div>
+    <div class="cl-item"><div class="cl-num">09</div><span>Расчёт UNIT-экономики по каждому бренду</span></div>
+    <div class="cl-item"><div class="cl-num">10</div><span>Отгрузка на склады маркетплейса стартовой партии</span></div>
+    <div class="cl-item"><div class="cl-num">11</div><span>План самовыкупов для разгона в первые 2 месяца</span></div>
+    <div class="cl-item"><div class="cl-num">12</div><span>A/B тестирование главного фото карточки</span></div>
+    <div class="cl-item"><div class="cl-num">13</div><span>Запуск и контроль рекламных инструментов</span></div>
+    <div class="cl-item"><div class="cl-num">14</div><span>Ежемесячный аналитический отчёт</span></div>
+  </div>
+</div>
+
+<!-- ════ 10 · СТОИМОСТЬ ════ -->
+<div class="section" id="s10">
+  <div class="section-header">
+    <span class="section-num">10</span>
+    <span class="section-title">Стоимость услуг</span>
+    <span class="section-sub">Ежемесячное управление продажами на маркетплейсах</span>
+  </div>
+  <div class="cost-grid">
+    <div class="cost-card featured">
+      <div class="cost-head wb-c">
+        <h3>Wildberries</h3>
+        <div class="cost-price">30 000 <small>₽/мес</small></div>
+      </div>
+      <div class="cost-body">
+        <div class="cost-item"><div class="cost-check">✓</div><span>Полное управление кабинетом WB</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Создание и оптимизация карточек</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Запуск и контроль рекламы</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Аналитика продаж и конкурентов</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Участие в акциях и распродажах</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Ежемесячный отчёт</span></div>
+      </div>
+    </div>
+    <div class="cost-card featured">
+      <div class="cost-head oz-c">
+        <h3>Ozon</h3>
+        <div class="cost-price">30 000 <small>₽/мес</small></div>
+      </div>
+      <div class="cost-body">
+        <div class="cost-item"><div class="cost-check">✓</div><span>Полное управление кабинетом Ozon</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Создание и оптимизация карточек</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Настройка трафарета и рекламы</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Работа с ценообразованием</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Подача на Ozon Select</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Ежемесячный отчёт</span></div>
+      </div>
+    </div>
+    <div class="cost-card featured">
+      <div class="cost-head ym-c">
+        <h3>Яндекс Маркет</h3>
+        <div class="cost-price">30 000 <small>₽/мес</small></div>
+      </div>
+      <div class="cost-body">
+        <div class="cost-item"><div class="cost-check">✓</div><span>Регистрация и управление кабинетом ЯМ</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Создание и оптимизация карточек</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Настройка рекламы и ставок</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Работа с ценообразованием</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Получение знака «Оригинал»</span></div>
+        <div class="cost-item"><div class="cost-check">✓</div><span>Ежемесячный отчёт</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="cost-card" style="margin-top:12px;border:2px dashed var(--border)">
+    <div class="cost-head" style="background:var(--light);border-bottom:1px solid var(--border)">
+      <h3 style="color:var(--dark)">Яндекс Кит</h3>
+      <div style="color:var(--dark);font-size:15px;font-weight:700;line-height:1.3">Стоимость<br><span style="font-size:12px;font-weight:500;opacity:.6">обсуждается индивидуально</span></div>
+    </div>
+    <div class="cost-body">
+      <div class="cost-item"><div class="cost-check" style="background:var(--dark)">✓</div><span>Создание сайта-витрины бренда на Яндекс Кит</span></div>
+      <div class="cost-item"><div class="cost-check" style="background:var(--dark)">✓</div><span>Интеграция товарного каталога</span></div>
+      <div class="cost-item"><div class="cost-check" style="background:var(--dark)">✓</div><span>Настройка под мобильные устройства</span></div>
+      <div class="cost-item"><div class="cost-check" style="background:var(--dark)">✓</div><span>Подключение к Яндекс Маркет</span></div>
+    </div>
+  </div>
+  <div class="dark-box">
+    <div class="db-label">Итого по трём площадкам</div>
+    <p>Управление WB + Ozon + ЯМ параллельно — <strong>90 000 ₽/мес</strong>. Рекомендуем запуск всех трёх с первого дня для достижения плановых показателей реализации. Рекламный бюджет оплачивается дополнительно согласно плану продвижения (ориентир: <strong>15% от выручки</strong> в первые 3 месяца). Яндекс Кит (сайт-витрина) — обсуждается индивидуально.</p>
+  </div>
+</div>
+
+<!-- ════ 11 · ССЫЛКИ ════ -->
+<div class="section" id="s11">
+  <div class="section-header">
+    <span class="section-num">11</span>
+    <span class="section-title">Полезные ссылки и калькуляторы</span>
+    <span class="section-sub">Все инструменты в одном месте</span>
+  </div>
+  <div class="links-row">
+    <a href="https://calculator.ozon.ru/" target="_blank" class="ext-link">
+      <div class="el-icon oz">OZ</div>
+      Калькулятор Ozon
+    </a>
+    <a href="https://partner.market.yandex.ru/welcome/cost-calculator" target="_blank" class="ext-link">
+      <div class="el-icon ym">ЯМ</div>
+      Калькулятор Яндекс Маркет
+    </a>
+    <a href="https://kit.yandex.ru/" target="_blank" class="ext-link">
+      <div class="el-icon kit">KIT</div>
+      Яндекс Кит (сайт-витрина)
+    </a>
+    <a href="https://seller.wildberries.ru/instructions/ru/ru/material/original-mark" target="_blank" class="ext-link">
+      <div class="el-icon wb">WB</div>
+      Знак «Оригинал» WB
+    </a>
+    <a href="https://seller-edu.ozon.ru/ozon-select/nachalo-raboty-na-platforme-selekt" target="_blank" class="ext-link">
+      <div class="el-icon oz">OZ</div>
+      Ozon Select — условия
+    </a>
+  </div>
+
+  <div style="margin-top:24px">
+    <div class="section-header" style="margin-bottom:14px">
+      <span class="section-title" style="font-size:15px">Ссылки на конкурентов</span>
+    </div>
+    <div class="links-row">
+      <a href="https://www.wildberries.ru/catalog/710055074/detail.aspx" target="_blank" class="ext-link">
+        <div class="el-icon wb">WB</div>
+        Конкурент #1 WB · 1 148 909 ₽/мес
+      </a>
+      <a href="https://www.wildberries.ru/catalog/142910966/detail.aspx" target="_blank" class="ext-link">
+        <div class="el-icon wb">WB</div>
+        Конкурент #2 WB · 700 032 ₽/мес
+      </a>
+      <a href="https://www.wildberries.ru/catalog/525216460/detail.aspx" target="_blank" class="ext-link">
+        <div class="el-icon wb">WB</div>
+        Конкурент #3 WB · 1 119 132 ₽/мес
+      </a>
+      <a href="https://www.ozon.ru/product/dzhinsy-wrangler-original-straight-zelenaya-varka-1894889872/" target="_blank" class="ext-link">
+        <div class="el-icon oz">OZ</div>
+        Wrangler Ozon · 289 105 ₽/мес
+      </a>
+      <a href="https://www.ozon.ru/product/dzhinsy-cave-3618552331/" target="_blank" class="ext-link">
+        <div class="el-icon oz">OZ</div>
+        Cave Ozon · 282 851 ₽/мес
+      </a>
+      <a href="https://www.ozon.ru/product/dzhinsy-levi-s-501-straight-fit-muzhskie-sinie-3575622534/" target="_blank" class="ext-link">
+        <div class="el-icon oz">OZ</div>
+        Levi's Ozon · 256 424 ₽/мес
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-left">
+    <strong>bodysite.ru</strong>
+    <span>ecommerce agency · комплексный маркетинг и разработка</span>
+  </div>
+  <a href="https://bodysite.ru/contacts/zakaz/" target="_blank" class="footer-cta">Оставить заявку →</a>
+</footer>
+
+</body>
+</html>
